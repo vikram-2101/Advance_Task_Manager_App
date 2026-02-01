@@ -69,14 +69,6 @@ const taskSchema = new mongoose.Schema(
       default: false,
       index: true,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-    },
-    updatedAt: {
-      type: Date,
-      default: Date.now,
-    },
   },
   { collection: "tasks", timestamps: true },
 );

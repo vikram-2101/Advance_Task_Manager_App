@@ -37,15 +37,14 @@ const auditSchema = new mongoose.Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      index: true,
+      // ❌ REMOVE index: true
     },
   },
   { collection: "audits", timestamps: false },
 );
 
-// TTL Index - auto-delete audit logs after 90 days
+// ✅ TTL Index - auto-delete audit logs after 90 days
 auditSchema.index({ createdAt: 1 }, { expireAfterSeconds: 90 * 24 * 60 * 60 });
 
 const Audit = mongoose.model("Audit", auditSchema);
-
 export default Audit;

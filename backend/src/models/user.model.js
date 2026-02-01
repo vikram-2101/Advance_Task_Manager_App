@@ -49,14 +49,6 @@ const userSchema = new mongoose.Schema(
       type: Date,
       default: null,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-    },
-    updatedAt: {
-      type: Date,
-      default: Date.now,
-    },
   },
   { collection: "users", timestamps: true },
 );
