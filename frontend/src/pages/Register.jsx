@@ -7,7 +7,7 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { authStore } from "../store/authStore.js";
 import { CheckCircle, XCircle } from "lucide-react";
-import authApi from "../api/authAPI.js";
+import authApi from "../api/authApi.js";
 
 const registerSchema = z
   .object({
