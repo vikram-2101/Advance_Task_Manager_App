@@ -8,7 +8,7 @@ import { toast } from "sonner";
 
 import { authStore } from "../store/authStore.js";
 import { AlertCircle } from "lucide-react";
-import authApi from "../api/authAPI.js";
+import authApi from "../api/authApi.js";
 
 const loginSchema = z.object({
   email: z.string().email("Invalid email"),
